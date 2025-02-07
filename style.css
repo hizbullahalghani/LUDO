@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tabs {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.tabs a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    background-color: #007bff;
+    margin: 0 10px;
+    transition: background-color 0.3s;
+}
+
+.tabs a:hover {
+    background-color: #0056b3;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-top: none;
+    background-color: #f9f9f9;
+    border-radius: 0 0 10px 10px;
+}
+
+.tab-content:target {
+    display: block;
+}
+
+/* Animasi dadu */
+@keyframes roll {
+    0% { transform: rotateX(0) rotateY(0); }
+    10% { transform: rotateX(180deg) rotateY(90deg); }
+    20% { transform: rotateX(360deg) rotateY(180deg); }
+    30% { transform: rotateX(540deg) rotateY(270deg); }
+    40% { transform: rotateX(720deg) rotateY(360deg); }
+    50% { transform: rotateX(900deg) rotateY(450deg); }
+    60% { transform: rotateX(1080deg) rotateY(540deg); }
+    70% { transform: rotateX(1260deg) rotateY(630deg); }
+    80% { transform: rotateX(1440deg) rotateY(720deg); }
+    90% { transform: rotateX(1620deg) rotateY(810deg); }
+    100% { transform: rotateX(1800deg) rotateY(900deg); }
+}
+
+.roll {
+    animation: roll 2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.dice-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    perspective: 1000px;
+}
+
+.dice-container img {
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
